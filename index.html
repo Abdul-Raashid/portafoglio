@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+    <title>Abdul Raashid</title>
+    <meta property="og:title" content="Abdul Raashid"/>
+    <meta name="description" content="Shaik Abdul Raashid 3D Portfolio"/>
+    <meta property="og:description" content="Shaik Abdul Raashid 3D Portfolio"/>
+    <meta property="og:url" content="https://shaikraashid.netlify.app/"/>
+    <meta property="og:image" content=""/>
+    <meta name="twitter:card" content="summary"/>
+    
+    
+    <style>
+    /* Style for Google Translate bar */
+    #google_translate_element {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999; /* Ensure it's above other content */
+      /*  background-color: #faf4e5; /* Set background color to light blue */
+        padding: 10px; /* Add padding for better appearance */
+        
+    }
+    
+</style>
+ 
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+          {pageLanguage: 'en'},
+          'google_translate_element'
+      );
+  }
+
+  function setTranslateBarColor(name) {
+        var translateBar = document.getElementById('google_translate_element');
+
+        if (name === '.light-theme') {
+            translateBar.style.backgroundColor = '#FAF4E5';
+        } else if (name === '.dark-theme') {
+            translateBar.style.backgroundColor = '#8395CD';
+        }
+    }
+
+    </script>
+
+    
+ 
+    <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    
+  </head>
+  <body class="light-theme">
+    <div id="google_translate_element"></div>
+  
+    <div class="experience">
+      <canvas class="experience-canvas"></canvas>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-wrapper">
+        <div class="loading">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" asscroll-container>
+
+      <div class="toggle-bar">
+        <div class="sun-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"/></svg>
+        </div>
+        <button class="toggle-button">
+          <div class="toggle-circle"></div>
+        </button>
+        <div class="moon-wrapper">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"/></svg>
+        </div>
+      </div>
+      
+      <div class="page-wrapper" asscroll>
+        <section class="hero">
+          <div class="hero-wrapper">
+
+            <!-- Intro Stuff -->
+            <div class="intro-text">Welcome to my portfolio!</div>
+            <div class="arrow-svg-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24"><path fill="currentColor" d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"/></svg>
+            </div>
+
+            <div class="hero-main">
+              <h1 class="hero-main-title">Shaik Abdul Raashid</h1>
+              <p class="hero-main-description">Cyber Security Student</p>
+            </div>
+
+            <div class="hero-second">
+              <p class="hero-second-subheading first-sub">Hi there! </p>
+              <p class="hero-second-subheading second-sub"></p>
+            </div>
+
+          </div>
+        </section>
+
+        <div class="first-move section-margin"></div>
+
+        <section class="first-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar"></div>
+          </div>
+
+          <script type="text/javascript">
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+          {pageLanguage: 'en'},
+          'google_translate_element'
+      );
+  }
+
+  function setTranslateBarColor(name) {
+        var translateBar = document.getElementById('google_translate_element');
+
+        if (name === '.light-theme') {
+            translateBar.style.backgroundColor = '#FAF4E5';
+        } else if (name === '.dark-theme') {
+            translateBar.style.backgroundColor = '#8395CD';
+        }
+    }
+
+    </script>
+
+    
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+
+          <div class="section-intro-wrapper">
+            <h1 class="section-title">
+              <span class="section-title-text">About Me</span>
+              <div class="section-title-decoration styleOne"></div>
+              <div class="section-title-decoration styleTwo"></div>
+              <div class="section-title-decoration styleThree"></div>
+            </h1>
+            <span class="section-number">01</span>
+            
+          </div>
+          
+
+          <div class="section-detail-wrapper">
+            <!-- <h3 class="section-heading">Hello!</h3> -->
+            <p class="section-text">🎓 As a graduate in Computer Science and Engineering with Honors from KL University, specializing in Cybersecurity and Blockchain, I have consistently demonstrated a passion for pushing boundaries and striving for excellence. With a stellar CGPA of 9, I have laid a solid foundation in both theoretical knowledge and practical skills.🏆</p>
+            <p class="section-text">🚀 My journey into the realm of cybersecurity has been driven by an insatiable curiosity and a relentless pursuit of knowledge. From mastering the intricacies of cybersecurity concepts to honing my skills with Linux tools, I have embraced every opportunity to expand my expertise. This relentless drive for self-improvement has not only fueled my academic success but has also empowered me to excel in real-world scenarios.🔍</p>
+            <p class="section-text">💼 During my internship at Yokogawa India Limited, where I focused on cybersecurity for Industrial Automation, I confronted complex challenges head-on and emerged with innovative solutions. This experience not only deepened my understanding of industrial cybersecurity but also instilled in me a keen appreciation for the critical role technology plays in safeguarding our increasingly interconnected world.💡</p>
+            <p class="section-text">🌱 Beyond the confines of traditional education and professional experiences, I am a fervent advocate for self-directed learning. I am constantly exploring emerging trends, experimenting with new tools and techniques, and engaging with online communities to stay at the forefront of technological advancements. Whether it's diving into the latest research papers, participating in hackathons, or contributing to open-source projects, I am committed to expanding my horizons and pushing the boundaries of what is possible in cybersecurity and blockchain.🌐</p>
+            <p class="section-text">💡 My ambition knows no bounds, and I am driven by a vision of a future where technology empowers individuals and organizations to thrive in a secure and interconnected world. Armed with a blend of academic excellence, practical experience, and a thirst for knowledge, I am poised to make meaningful contributions to the field of cybersecurity and blockchain, driving innovation and shaping the digital landscape for years to come.✌️</p>
+            <p class="section-text">📚 Committed to continuous learning and staying updated with the latest developments in cybersecurity and related technologies.🌟</p>
+            <br>
+            <br>
+            <p><img src="https://images.credly.com/images/bff7c3fc-c253-4fb4-b0e5-d9fc84bf7d37/blob.png" style="width: 600px;" alt="Andhra Loyola Collage"></p>
+            <br>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 id="education">EDUCATION</h1>
+            <br>
+            <br>
+            <br>
+            <p><img src="https://shaikraashid.netlify.app/assets/img/education/kl.png" style="width: 430px;" alt="KL University" target="_blank" ></p>
+            <br>
+            <br>
+            <h3><a href="https://www.linkedin.com/school/kluniversity/" target="_blank">KL University</a></h3>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">Bachelor of Technology In CSE-HONORS</h4>
+            <br>
+            <br>
+            <p>CGPA - 9.0</p>
+            <br>
+            <p>[ 2020  -  2024 ]</p>
+
+            <br>
+            <br>
+            <p><img src="https://shaikraashid.netlify.app/assets/img/education/ALC.png" style="width: 400px;" alt="Andhra Loyola Collage"></p>
+            <br>
+            <br>
+            <h3 >Andhra Loyola Collage</h3>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">MPC (BIEAP)</h4>
+            <br>
+            <br>
+            <p>CGPA - 8.29</p>
+            <br>
+            <p>[ 2018  -  2020 ]</p>
+
+            <br>
+            <br>
+            <p><img src="https://shaikraashid.netlify.app/assets/img/education/SCIOS.png" style="width: 400px;"  alt="Sri Chaitanya International Olympiad School"></p>
+            <br>
+            <br>
+            <h3>Sri Chaitanya International Olympiad School</h3>
+            <br>
+            <br>
+            <h4 id="bachelor-of-technology-in-leather-technology">Central Board of Secondary Education (CBSE)</h4>
+            <br>
+            <br>
+            <p>CGPA - 7.5</p>
+            <br>
+            <p>[ 2017  -  2018 ]</p>
+          </div>
+
+        </section>
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">My Projects</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">02</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <br>
+            
+
+            <h3 class="section-heading">Portfolio</h3>
+            <p class="section-text">Welcome to my Academic Portfolio Showcase! Here, you'll find a curated collection highlighting my certifications, publications, and academic achievements. Explore my dedication to continuous learning, research contributions, and academic excellence in Computer Science and Cybersecurity Engineer</p>
+            <p class="section-text"></p>
+            <br>
+            <p><a href="https://shaikraashid.netlify.app/" title="Portfolio" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+            <br>
+
+            <h3 class="section-heading">Resort Booking</h3>
+            <p class="section-text">Welcome to our MERN Stack Resort Booking Collage Project! Dive into a virtual world of serene getaways and exciting destinations. Our user-friendly interface allows you to explore various resorts, check availability, and make bookings effortlessly. With dynamic frontend features powered by MongoDB, Express.js, React.js, and Node.js, embark on a journey to discover your perfect vacation spot.</p>
+            <p class="section-text"></p>
+            <br>
+            <p><a href="https://github.com/Abdul-Raashid/Resort-Booking" title="Resort-Booking" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+            <br>
+
+            <h3 class="section-heading">Vehicle-Tracking</h3>
+            <p class="section-text">
+              Introducing our Company Vehicle Locator, a Spring Boot Java project. Explore a wide array of vehicles from multiple locations with ease. Find detailed information on each vehicle's specifications and availability, all in one convenient platform. Experience seamless navigation and real-time updates for effortless vehicle selection.</p>
+            <p class="section-text"></p>
+            <br>
+            <p><a href="https://github.com/Abdul-Raashid/Vehicle-Tracking/tree/master" title="Vehicle-Tracking" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+            <br>
+
+
+            <h3 class="section-heading">Jarvise Virtual Assistant</h3>
+            <p class="section-text">This project is a voice assistant program that utilizes speech recognition and synthesis to interact with users, performing various tasks based on voice commands. It demonstrates the integration of APIs for speech recognition, text-to-speech conversion, accessing web content, and interacting with the operating system, showcasing the capabilities of a basic virtual assistant.
+
+              
+            </p>
+            <p class="section-text"></p>
+            <br>
+            <p></p>
+            <br>
+            <p><a href="https://github.com/Abdul-Raashid/Python-Projects/blob/main/jarvise.py" target="_blank" title="Jarvise Virtual Assistant">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+              
+            
+            <h3 class="section-heading">  Disease-Predictor-ML-Driven-Symptom-Analysis  </h3>
+            <p class="section-text">HealthPredict is an innovative disease prediction system that combines machine learning algorithms with an intuitive graphical user interface (GUI). Users can input symptoms, and the system predicts possible diseases using Decision Trees, Random Forest, and Naive Bayes models.</p>
+            <p class="section-text">
+        </p>
+            <br>
+            <p> <a href="https://github.com/Abdul-Raashid/Disease-Predictor-ML-Driven-Symptom-Analysis" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+
+            <h3 class="section-heading">Strong Password Suggester</h3>
+            <p class="section-text">The importance of this project lies in its contribution to enhancing online security by promoting the use of strong passwords. It addresses the need for secure authentication measures in an increasingly digital world, where protecting personal and sensitive information is paramount.</p>
+            <p class="section-text"></p>
+            <br>
+            <p><a href="https://github.com/Abdul-Raashid/strong-password-suggester" title="strong-password-suggester" target="_blank">See Project<img src="https://static.licdn.com/aero-v1/sc/h/8w0vew433o9nluoruq9k5eqy" alt="External link"></a></p>
+            <br>
+            
+          </div>
+        </section>
+        
+        <div class="third-move section-margin"></div>
+
+        <section class="third-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Work Experience</span>
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">03</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <p><img src="https://miro.medium.com/v2/resize:fit:450/format:webp/1*3gdJeHdhqKdbdeMcF74pNQ.png" style="width: 600px;" alt="Cyber Security for Industrial Automation"></p>
+
+            <br>
+            <br>
+            <h4 id="-cyber-intelligence-solutions-https-www-linkedin-com-company-official-cis-trk-public_profile_experience-item_profile-section-card_subtitle-click-"><a href="https://www.yokogawa.com/in/" target="_blank">Yokogawa India Limited</a></h4>
+            <br>
+            <p><strong>Cybersecurity Intern</strong> [ May 2022  -  June 2022 ]</p>
+            <br>
+            <br>
+            <p> <ul>Practical Experience with Network Infrastructure.</ul>
+              <br>
+                <ul>Acquired comprehensive knowledge and hands-on experience in OS patch management, switches and firewalls during my internship at Yokogawa.</ul>
+                <br>
+              <ul>Collaborated with a team of network engineers and IT professionals to design and implement network solutions aimed at improving efficiency and reliability.</ul></p>
+              <br>
+             <h4 > <a href="https://drive.google.com/file/d/1X0iR58ZZZlbKmX308UfUMMCDZoLSXuwV/view?usp=drive_link" target="_blank">Certificate</a></h4>
+              
+            <br>
+            <br>
+            <br>
+
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*zw3LKUGnXEtjzizSE1ZKiA.png" style="width: 600px;" alt="Cyber Security Virtual Internship"></p>
+
+            <br>
+            <br>
+            <h4 id="-cyber-intelligence-solutions-https-www-linkedin-com-company-official-cis-trk-public_profile_experience-item_profile-section-card_subtitle-click-"><a href="https://drive.google.com/file/d/1ysJURp7B8UwXxWQTCKfqIRgovp5qo16H/view?usp=drive_link" target="_blank">CISCO AICTE</a></h4>
+            <br>
+            <p><strong>Cybersecurity Intern</strong> [ May 2023  -  July 2023 ]</p>
+            <br>
+            <br>
+            <p> <ul>Versatile Learning: I have completed a series of courses, on CCNA; Netacad that
+              encompass both practical aspects. These courses covered modules such as
+              Introduction to Networks, Switching and Routing and Cybersecurity Essentials.</ul>
+              <br>
+                <ul>Expertise Highlights; I have honed my skills in cybersecurity and computer
+                  networks through learning. This has provided me with an understanding of these
+                  fields. Equipped me with practical expertise to further my professional
+                  development.</ul>
+                <br>
+              <ul>Strategic Preparation: I have demonstrated a commitment to an internship
+                approach ensuring that I am well prepared for success. My proficiency in
+                networking concepts and cybersecurity principles has been instrumental, in
+                achieving targeted goals.</ul></p>
+              <br>
+
+
+
+
+            <h4> <a href="https://drive.google.com/file/d/1RZep1Jc_5dZ5_fjU7uslwXGO8dgt9EBb/view?usp=drive_link" target="_blank">Certificate</a></h4>
+            
+
+          </div>
+        </section>
+        
+         
+        
+
+
+        <section class="third-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Publications</span>
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">04</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            
+
+            <br>
+            <br>
+            <h4 ><a href="https://ieeexplore.ieee.org/document/10083689" target="_blank">Detection Methods for Distributed Denial of Services (DDOS) Attacks </a></h4>
+            <br>
+            <p>Published a paper titled "Detection Methods for Distributed Denial of Services (DDOS) Attacks" at an IEEE conference. Explored strategies for the detection and prevention of DDOS attacks.</p>
+            
+            <br>
+            <br>
+            <br>
+
+            <p><img src="https://media.licdn.com/dms/image/D5612AQFOThJXVnMX6Q/article-cover_image-shrink_423_752/0/1697980891057?e=1714003200&v=beta&t=7sLFcvirDkR5zN5LnoIJLcP5ajZnLGqqVfytDJRIpUI" alt="DDOS Attack"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://jchr.org/index.php/JCHR/article/view/1067" target="_blank">Empowering Education: Advanced Attendance Monitoring with RFID Technology and Parental Notifications </a></h4>
+            <br>
+            <p>Authored "Empowering Education: Advanced Attendance Monitoring with RFID Technology and Parental Notifications," published in the Journal of Chemical Health Risks, a Scopus-indexed foreign journal.</p>
+            <br>
+            <br>
+            <p><img src="https://media.licdn.com/dms/image/D4E12AQHx6Mj2c3AqQw/article-cover_image-shrink_720_1280/0/1708499143350?e=1714003200&v=beta&t=aOuiOujPIk-Dapoa9bU689rJratwLZQz8O7JinAB5Ec" alt="Empowering Education: Advanced Attendance Monitoring with RFID Technology and Parental Notifications"></p>
+            
+
+          </div>
+        </section>
+
+
+
+
+
+
+
+        <section class="third-section section left">
+          <div class="progress-wrapper progress-bar-wrapper-left">
+            <div class="progress-bar green-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper green-text green-border">
+            <h1 class="section-title green-text green-border">
+              <span class="section-title-text green-text">Global Certifications</span>
+              <div class="section-title-decoration styleOne green-border"></div>
+              <div class="section-title-decoration styleTwo green-border"></div>
+              <div class="section-title-decoration styleThree green-background green-border"></div>
+            </h1>
+            <span class="section-number green-text">05</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            
+
+            <br>
+            <br>
+            <h4 ><a href="https://rhtapps.redhat.com/verify/?certId=" target="_blank">1. Red Hat® Certified Enterprise Application Developer</a></h4>
+            <br>
+            <p></p>
+            
+            <br>
+            <br>
+            <br>
+
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*PHvk74288SG6u5kFil14VA.png" style="width: 500px;" alt="RedHat EX-183 Certification"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://www.credly.com/badges/84328d9c-3182-4d6e-b485-67fe891867fd/public_url" target="_blank">2. AWS Certified Solutions Architect — Associate</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7rYsHXOlKyyYowokvU3UqQ.png" style="width: 500px;" alt="AWS Solution Architect"></p>
+            
+
+            <br>
+            <br>
+            <h4> <a href="https://www.credly.com/badges/cc61e4de-5d5c-4654-a2e7-211811cd572f/public_url" target="_blank">3. AWS Certified Cloud Practitioner</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*dljV2oAX7fsnzQHpmA-A-A.jpeg" style="width: 500px;" alt="AWS Cloud Practitioner"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://partnerportal.service-now.com/partnerhome?id=verify_certificate" target="_blank">4. ServiceNow: Certified System Administrator</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://partnerportal.service-now.com/partnerhome?id=verify_certificate" style="width: 500px;" alt="ServiceNow: Certified System Administrator"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://cert.diceid.com/csr/cid/ICItIM?verify=true" target="_blank">5. Wipro Talent Next Java Full Stack</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*ORrJKZ7p80j4tvjXlUTPtw.jpeg" style="width: 500px;" alt="Wipro Talent Next Java Full Stack"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/shaikabdulraashid-3265/credentials/5d6d4458ea2aa6a2?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">6. Microsoft Certified: Azure Cosmos DB Developer Specialty</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*-SU232xuVgQqlHf9bQcq-w.png" style="width: 500px;" alt="Microsoft Azure Cosmos DB Developer Specialty"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/SHAIKABDULRAASHID-7400/credentials/E106E6EE0E9182F4?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">7. Microsoft Certified: Azure Solutions Architect Expert</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*o3bhScSZ36H2shc0zAOTQg.png" style="width: 500px;" alt="Microsoft Certified: Azure Solutions Architect Expert"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/SHAIKABDULRAASHID-3265/credentials/C40DACDAB99B1E7D?ref=https%3a%2f%2fmedium.com%2f%40shaikraashid123%2funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">8. Microsoft Certified: DevOps Engineer Expert</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*eAgQPlsuyD-PT_76xZATzA.png" style="width: 500px;" alt="Microsoft Certified: DevOps Engineer Expert"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/shaikabdulraashid-7400/credentials/3326db517b525092?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">9. Microsoft Certified: Azure Administrator Associate</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*r--OZy5opeq50YljpDheXw.png" style="width: 500px;" alt="Microsoft Certified: Azure Administrator Associate"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/shaikabdulraashid-3265/credentials/3334b0863e69b1e?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">10. Microsoft Certified: Azure Developer Associate</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*9Ng0IvLjHXUlQs8FTams1w.png" style="width: 500px;" alt="Microsoft Certified: Azure Developer Associate"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/shaikabdulraashid-3265/credentials/bbdd68fd1d2c5dac?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">11. Microsoft 365 Certified: Fundamentals</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*-iNBhW4fPiGfHew7N5Q4GA.png" style="width: 500px;" alt="Microsoft 365 Certified: Fundamentals"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/shaikabdulraashid-3265/credentials/58839be45e0a1d13?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">12. Microsoft Certified: Security, Compliance, and Identity Fundamentals</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*zIrDZXqBdJFs6Dw5thKN0w.png" style="width: 500px;" alt="Microsoft Certified: Security, Compliance, and Identity Fundamentals"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/shaikabdulraashid-3265/credentials/19b395dc2311bc70?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">13. Microsoft Certified: Azure AI Fundamentals</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*2-nSfNaaG1bLMpms6y2ULg.png" style="width: 500px;" alt="Microsoft Certified: Azure AI Fundamentals"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://learn.microsoft.com/en-us/users/SHAIKABDULRAASHID-3265/credentials/AF0F46AB8E551923?ref=https%3A%2F%2Fmedium.com%2F%40shaikraashid123%2Funlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d" target="_blank">14. Microsoft Certified: Azure Fundamentals</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*0HvchnGj2ziE0nbs5E4Gjg.png" style="width: 500px;" alt="Microsoft Certified: Azure Fundamentals"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=D4FBE8A940B5DA9750BCE468F74B7295690AAA90678505A1D92C4BF3B1ABC1C0" target="_blank">15. Oracle Cloud Fusion Analytics Warehouse 2023 Certified Implementation Professional</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*uZJY2oLp8vJ9SJB82ZtyPw.png" style="width: 500px;" alt="Oracle Cloud Fusion Analytics Warehouse 2023 Certified Implementation Professional"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=E29CBCBC272274A61FBBC43D0110773D80BEB56D1C554F9D08832743D0074E6C" target="_blank">16. Oracle Cloud Infrastructure 2023 Certified Application Integration Professional</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*0GdAFfMcAklWer27mUXU4g.png" style="width: 500px;" alt="Oracle Cloud Infrastructure 2023 Certified Application Integration Professional"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=165C45F0EB86AC958F366FA98E010B2A98EAB964B98F683202409F10E4A7C086" target="_blank">17. Oracle Cloud Infrastructure 2023 Certified Architect Associate</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*dehlHchF-fLfH_6_iBha5g.png" style="width: 500px;" alt="Oracle Cloud Infrastructure 2023 Certified Architect Associate"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=5C3B5A533365ACB1DDACCDE15D418FD21392D1BE98754BCB41C01AC30B6953C9" target="_blank">18. Oracle Cloud Infrastructure 2023 Certified Enterprise Analytics Professional</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*CI5KToEu7gaUVO9e3dZMcw.png" style="width: 500px;" alt="Oracle Cloud Infrastructure 2023 Certified Enterprise Analytics Professional"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=2682DC04FBE7FFDF2F759A3A476D502C96389B17FCEAE7705ED4B683D65C59F0" target="_blank">19. Oracle Cloud Infrastructure 2023 Certified Multicloud Architect Associate</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*XEauBvZwexDf72mI-51Tkw.png" style="width: 500px;" alt=" Oracle Cloud Infrastructure 2023 Certified Multicloud Architect Associate"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=A5A317504FB82430A7F35CEFDC73931DD3462DF9D6A30CEB0EF726951F0A625B" target="_blank">20. Oracle Cloud Infrastructure 2023 Certified Developer Professional</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*wfiViOMymHCekHmu7SV_pQ.png" style="width: 500px;" alt="Oracle Cloud Infrastructure 2023 Certified Developer Professional"></p>
+
+            <br>
+            <br>
+            <h4> <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=FD4D518D064D31F3DF7489382788C70E0EEB54F6E9F3CF9A0ACA74F0C1BFE7E4" target="_blank">21. Oracle Cloud Infrastructure 2023 Certified Foundations Associate</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*5wTT1pFBIf4ro99-TUmVcg.png" style="width: 500px;" alt="Oracle Cloud Infrastructure 2023 Certified Foundations Associate"></p>
+
+          
+            
+            <br>
+            <br>
+            <h4> <a href="https://arcx.io/verify-certificate?id=da1ecf62293d1390d627069c5a76d0922555d4f4&k=3e94e0a26b304f518977824656f46d08" target="_blank">22. arcX Cyber Threat Intelligence 101 Certification</a></h4>
+            <br>
+            <p></p>
+            <br>
+            <br>
+            <p><img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*q7Qj5EXV3dfyKFkSf6HgnQ.jpeg" style="width: 500px;" alt="arcX Cyber Threat Intelligence 101 Certification"></p>
+
+
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="second-move section-margin"></div>
+
+        <section class="second-section section right">
+          <div class="progress-wrapper progress-bar-wrapper-right">
+            <div class="progress-bar blue-background"></div>
+          </div>
+
+          <div class="section-intro-wrapper blue-text blue-border">
+            <h1 class="section-title blue-text blue-border">
+              <span class="section-title-text blue-text">CONTACT</span>
+              <div class="section-title-decoration styleOne blue-border"></div>
+              <div class="section-title-decoration styleTwo blue-border"></div>
+              <div class="section-title-decoration styleThree blue-background blue-border"></div>
+            </h1>
+            <span class="section-number blue-text">04</span>
+          </div>
+
+          <div class="section-detail-wrapper">
+            <h3 class="section-heading">Resume</h3>
+            <p class="section-text">As I embark on crafting a new high-end portfolio, I've chosen to retain my old portfolio as a resume within it. This decision stems from a desire to preserve a comprehensive record of my past projects and skills, reflecting the journey that has shaped my professional identity. The old portfolio serves as a testament to my growth, showcasing a diverse range of projects and honed expertise. By integrating it into the new portfolio, I aim to bridge the gap between past achievements and future aspirations, ensuring a seamless transition while acknowledging the foundations upon which I continue to build.
+</p>
+            <br>
+            <p><a href="https://shaikraashid.netlify.app/" target="_blank"><img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white&amp;logoColor=white" alt="Resume"></a> </p>
+<br>
+            <h4><a href="https://drive.google.com/file/d/1BBwD9ney0CKYqbgqX41bFgUA-yC9ZIs0/view" target="_blank">Download </a></h4>
+
+            
+
+            <h3 class="section-heading">Linkedin</h3>
+            <p class="section-text">If you wish to connect, I invite you to reach out to me on LinkedIn. On the platform, I engage in conversations concerning network security, data privacy, and vulnerability management. My profile reflects my passion for cybersecurity and showcases my accomplishments and contributions across various IT domains, including publications and achievements. I eagerly anticipate connecting with fellow professionals in the cybersecurity sphere and engaging in meaningful discussions.</p>
+            <br>
+            <p><a href="https://www.linkedin.com/in/shaik-abdul-raashid-905072215/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&amp;logoColor=white" alt="LinkedIn"></a> </p>
+            <h3 class="section-heading">Github</h3>
+            <p class="section-text">
+              As an aspiring cybersecurity student and enthusiastic tech aficionado, you'll often find me on Github, actively engaging in the open-source community. I'm deeply committed to continuous learning and sharing knowledge within the realm of cybersecurity. I remain abreast of the latest technologies, vulnerabilities, trends, and advancements in cybersecurity, perpetually seeking out new avenues for growth and collaboration. If you're seeking a collaborator with a fervent dedication to learning and innovation, look no further—I'm here to contribute and thrive in dynamic, forward-thinking projects.</p>
+            <br>
+            <p><a href="https://github.com/Abdul-Raashid" target="_blank"><img src="https://img.shields.io/badge/Github-12100E?logo=github&amp;logoColor=white" alt="GitHub"></a> </p>
+            
+            <h3 class="section-heading">Medium</h3>
+            <p class="section-text">I have compiled my achievements, certifications, publications, and internships from my B.Tech journey. These reflect my passion for cybersecurity, showcasing my contributions across various IT domains. If you're interested in viewing them, I invite you to visit my Medium blog, where I delve into discussions on network security, data privacy, and vulnerability management. I eagerly look forward to connecting with fellow cybersecurity professionals and engaging in insightful conversations.</p>
+            <br>
+            <p><a href="https://medium.com/@shaikraashid123/unlocking-my-academic-journey-exploring-certifications-and-gained-skills-8d377bb6a60d?source=social.linkedin" target="_blank"><img src="https://img.shields.io/badge/Medium-12100E?logo=medium&amp;logoColor=white" alt="Medium"></a> </p>
+          </div>
+        </section>
+        <footer class="footer">
+          <span class="footer__copyright">Copyright &copy; 2024 - Shaik Abdul Raashid</span>
+        </footer><br><br>
+
+
+
+  
+
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+
+
+
+
+
+    
+    
+      
+
+
+    
+  </body>
+</html>
